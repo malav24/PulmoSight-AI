@@ -1,0 +1,3 @@
+# The API dependencies are included in the root requirements.txt.
+# From the project root:  pip install -r requirements.txt
+-r ../requirements.txt

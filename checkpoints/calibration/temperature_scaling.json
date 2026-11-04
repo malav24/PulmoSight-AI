@@ -1,0 +1,12 @@
+{
+  "model_b": {
+    "temperature": 1.2494507763742435,
+    "temperature_at_bound": false,
+    "threshold": 0.39759361743927,
+    "threshold_method": "Youden J on RSNA validation",
+    "fitted_on": "rsna_val",
+    "n": 4003,
+    "checkpoint_saved_at": "2026-11-03T22:56:06",
+    "checkpoint_epoch": 3
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "full_dataset": {
+    "n_images": 5606,
+    "n_patients": 4230,
+    "n_pneumonia": 62,
+    "prevalence": 0.011059579022475919,
+    "n_no_finding": 3044,
+    "pneumonia_only_label": 14,
+    "view_positions": {
+      "PA": 3393,
+      "AP": 2213
+    },
+    "images_per_patient_mean": 1.3252955082742317,
+    "selection_notes": []
+  },
+  "external_set": {
+    "n_images": 4159,
+    "n_patients": 3406,
+    "n_pneumonia": 29,
+    "prevalence": 0.006972830007213273,
+    "n_no_finding": 2677,
+    "pneumonia_only_label": 7,
+    "view_positions": {
+      "PA": 2596,
+      "AP": 1563
+    },
+    "images_per_patient_mean": 1.2210804462712859,
+    "selection_notes": [
+      "test_list.txt not found - using all 5606 NIH images listed (none are used for training)",
+      "excluded 1447 NIH images that also appear in RSNA"
+    ]
+  },
+  "missing_image_files": 0
+}

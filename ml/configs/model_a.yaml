@@ -1,0 +1,9 @@
+# Model A = ablation B: classification + localization, NO attention guidance.
+_base_: hybrid_common.yaml
+experiment:
+  name: model_a
+loss:
+  alpha: 1.0
+  lambda: 0.0
+checkpoint:
+  model_key: model_a

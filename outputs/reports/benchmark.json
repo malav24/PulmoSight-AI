@@ -1,0 +1,124 @@
+{
+  "environment": {
+    "python": "3.11.9",
+    "torch": "2.5.1+cu121",
+    "cuda_available": true,
+    "gpus": [
+      "NVIDIA GeForce RTX 2050"
+    ],
+    "cpu_count": 16
+  },
+  "results": [
+    {
+      "model": "model_b",
+      "batch": 4,
+      "image_size": 384,
+      "device": "cuda",
+      "amp": true,
+      "params_m": 5.2,
+      "sec_per_step": 0.113,
+      "images_per_sec": 35.3,
+      "peak_gpu_mem_gb": 0.67,
+      "transformer_tokens": 144,
+      "process_peak_ram_mb": 1674
+    },
+    {
+      "model": "model_b",
+      "batch": 8,
+      "image_size": 384,
+      "device": "cuda",
+      "amp": true,
+      "params_m": 5.2,
+      "sec_per_step": 0.142,
+      "images_per_sec": 56.4,
+      "peak_gpu_mem_gb": 1.25,
+      "transformer_tokens": 144,
+      "process_peak_ram_mb": 1687
+    },
+    {
+      "model": "model_b",
+      "batch": 16,
+      "image_size": 384,
+      "device": "cuda",
+      "amp": true,
+      "params_m": 5.2,
+      "sec_per_step": 0.26,
+      "images_per_sec": 61.6,
+      "peak_gpu_mem_gb": 2.4,
+      "transformer_tokens": 144,
+      "process_peak_ram_mb": 1743
+    },
+    {
+      "model": "resnet50",
+      "batch": 4,
+      "image_size": 384,
+      "device": "cuda",
+      "amp": true,
+      "params_m": 23.5,
+      "sec_per_step": 0.112,
+      "images_per_sec": 35.6,
+      "peak_gpu_mem_gb": 0.93,
+      "process_peak_ram_mb": 1833
+    },
+    {
+      "model": "resnet50",
+      "batch": 8,
+      "image_size": 384,
+      "device": "cuda",
+      "amp": true,
+      "params_m": 23.5,
+      "sec_per_step": 0.186,
+      "images_per_sec": 43.0,
+      "peak_gpu_mem_gb": 1.43,
+      "process_peak_ram_mb": 1834
+    },
+    {
+      "model": "resnet50",
+      "batch": 16,
+      "image_size": 384,
+      "device": "cuda",
+      "amp": true,
+      "params_m": 23.5,
+      "sec_per_step": 0.557,
+      "images_per_sec": 28.7,
+      "peak_gpu_mem_gb": 2.48,
+      "process_peak_ram_mb": 1950
+    },
+    {
+      "model": "vit_small",
+      "batch": 4,
+      "image_size": 384,
+      "device": "cuda",
+      "amp": true,
+      "params_m": 21.8,
+      "sec_per_step": 0.155,
+      "images_per_sec": 25.8,
+      "peak_gpu_mem_gb": 0.76,
+      "process_peak_ram_mb": 1950
+    },
+    {
+      "model": "vit_small",
+      "batch": 8,
+      "image_size": 384,
+      "device": "cuda",
+      "amp": true,
+      "params_m": 21.8,
+      "sec_per_step": 0.179,
+      "images_per_sec": 44.6,
+      "peak_gpu_mem_gb": 1.19,
+      "process_peak_ram_mb": 1956
+    },
+    {
+      "model": "vit_small",
+      "batch": 16,
+      "image_size": 384,
+      "device": "cuda",
+      "amp": true,
+      "params_m": 21.8,
+      "sec_per_step": 0.359,
+      "images_per_sec": 44.5,
+      "peak_gpu_mem_gb": 2.01,
+      "process_peak_ram_mb": 1956
+    }
+  ]
+}

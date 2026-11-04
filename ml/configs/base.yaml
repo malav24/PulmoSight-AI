@@ -1,0 +1,99 @@
+# Shared defaults. Every model config inherits from this file via `_base_: base.yaml`.
+# Override any key from the command line, e.g.  training.epochs=5 loader.batch_size=8
+
+experiment:
+  name: base
+  seed: 42
+  deterministic: false
+  device: auto            # auto | cuda | cpu | mps
+
+data:
+  train_dataset: rsna
+  rsna:
+    root: data/rsna
+    labels_csv: stage_2_train_labels.csv
+    class_info_csv: stage_2_detailed_class_info.csv
+    image_dir: stage_2_train_images
+    splits_csv: data/rsna/splits/rsna_patient_splits.csv
+    cache_dir: null       # e.g. data/rsna/cache_384_clahe (built by scripts/prepare_rsna.py --cache)
+  nih:
+    root: data/nih
+    entries_csv: Data_Entry_2017_v2020.csv
+    bbox_csv: BBox_List_2017.csv
+    test_list: test_list.txt
+    rsna_mapping_json: data/nih/pneumonia-challenge-dataset-mappings_2018.json
+    exclude_rsna_overlap: true     # drop NIH images that were re-used in RSNA (see DATASET_SETUP.md)
+    subset: official_test          # official_test | all
+    negative_definition: all_non_pneumonia   # all_non_pneumonia | no_finding
+    view_positions: [PA, AP]
+    one_image_per_patient: false
+    max_samples: null
+    use_official_bboxes: true      # the ~120 expert pneumonia boxes in BBox_List_2017.csv
+  split:
+    train: 0.70
+    val: 0.15
+    test: 0.15
+    stratify_on: class            # class (3 RSNA classes) | target
+  preprocessing:
+    image_size: 384
+    resize_mode: stretch          # stretch | letterbox
+    intensity_percentiles: [0.5, 99.5]
+    clahe: true
+    clahe_clip_limit: 2.0
+    clahe_tile_grid: 8
+    normalize_mean: [0.485, 0.456, 0.406]
+    normalize_std: [0.229, 0.224, 0.225]
+  augmentation:
+    enabled: true
+    horizontal_flip: false        # off by default: cardiac/laterality cues are anatomically asymmetric
+    rotate_limit: 7
+    scale_limit: 0.08
+    shift_limit: 0.05
+    brightness_contrast: 0.15
+    p_affine: 0.7
+    p_intensity: 0.5
+  max_boxes: 8
+
+loader:
+  batch_size: 16
+  eval_batch_size: 32
+  num_workers: 4
+  pin_memory: true
+  balanced_sampling: false
+
+model:
+  name: hybrid
+
+loss:
+  classification: weighted_bce    # weighted_bce | focal | bce
+  pos_weight: auto                # auto = n_neg / n_pos from the training split, or a number
+  focal_alpha: 0.25
+  focal_gamma: 2.0
+  alpha: 0.0                      # localization weight
+  lambda: 0.0                     # attention-guidance weight
+  localization: dice_bce          # dice | bce | dice_bce
+  loc_on_negatives: true          # BCE on empty masks of negative images (dice only on positives)
+  attention: outside_mass         # outside_mass | kl | outside_mass+kl
+  attention_kl_weight: 1.0
+
+training:
+  epochs: 30
+  lr: 3.0e-4
+  backbone_lr: 1.0e-4
+  weight_decay: 1.0e-4
+  scheduler: cosine               # cosine | plateau | none
+  warmup_epochs: 1
+  min_lr: 1.0e-6
+  amp: true
+  grad_clip: 1.0
+  freeze_backbone_epochs: 0
+  early_stopping_patience: 6
+  monitor: val_auc                # same criterion for every model -> fair comparison
+  monitor_mode: max
+  max_train_batches: null         # set small values for smoke tests
+  max_val_batches: null
+  resume: false
+
+checkpoint:
+  subdir: hybrid
+  model_key: model_a

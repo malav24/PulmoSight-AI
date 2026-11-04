@@ -1,0 +1,24 @@
+{
+  "best": 0.8966816369227865,
+  "best_path": "C:\\Users\\malav\\Downloads\\AI in Healthcare\\right-for-the-right-reason\\checkpoints\\hybrid\\model_b_best.pth",
+  "last_path": "C:\\Users\\malav\\Downloads\\AI in Healthcare\\right-for-the-right-reason\\checkpoints\\hybrid\\model_b_last.pth",
+  "log": "C:\\Users\\malav\\Downloads\\AI in Healthcare\\right-for-the-right-reason\\outputs\\logs\\model_b_training_log.csv",
+  "last_epoch_metrics": {
+    "epoch": 9,
+    "train_loss": 0.7811276889055003,
+    "train_loss_cls": 0.30558595231366315,
+    "train_loss_loc": 0.4266895900891245,
+    "train_loss_attn": 0.09770429178923704,
+    "val_loss": 2.0199060632367747,
+    "val_loss_cls": 1.347349576151374,
+    "val_loss_loc": 0.5948140126884043,
+    "val_loss_attn": 0.1554849344562499,
+    "val_auc": 0.8557944973047104,
+    "val_threshold_youden": 0.0247802734375,
+    "val_dice_pos": 0.47048112845407697,
+    "val_attn_mass_in_box": 0.9020820616580559,
+    "lr_head": 0.00023439746627167612,
+    "epoch_seconds": 321.5,
+    "is_best": 0
+  }
+}

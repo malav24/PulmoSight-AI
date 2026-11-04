@@ -1,0 +1,18 @@
+# Hybrid EfficientNet-B0 + Transformer architecture shared by Model A, Model B and the ablation.
+# Keep this identical across variants so comparisons isolate the effect of the training objective.
+_base_: base.yaml
+model:
+  name: hybrid
+  backbone: efficientnet_b0
+  pretrained_backbone: true     # ImageNet init for TRAINING only; inference always loads a trained checkpoint
+  d_model: 256
+  num_layers: 2
+  num_heads: 8
+  dim_feedforward: 512
+  dropout: 0.1
+  token_pool: 1                 # extra avg-pool on the stride-32 grid (1 = 12x12 = 144 tokens at 384px)
+  attn_pool_hidden: 128
+  head_dropout: 0.2
+  use_skip: true                # stride-16 skip connection for the localization decoder
+checkpoint:
+  subdir: hybrid

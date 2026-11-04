@@ -1,0 +1,45 @@
+{
+  "n_images": 26684,
+  "n_positive": 6012,
+  "n_negative": 20672,
+  "prevalence": 0.225303552690751,
+  "class_counts": {
+    "No Lung Opacity / Not Normal": 11821,
+    "Normal": 8851,
+    "Lung Opacity": 6012
+  },
+  "n_boxes": 9555,
+  "boxes_per_positive_image": {
+    "1": 2614,
+    "2": 3266,
+    "3": 119,
+    "4": 13
+  },
+  "box_relative_area": {
+    "mean": 0.07393211871385574,
+    "median": 0.06182575225830078,
+    "min": 0.0022125244140625,
+    "max": 0.3539886474609375
+  },
+  "splits": {
+    "test": {
+      "n": 4003,
+      "n_positive": 902,
+      "prevalence": 0.22533100174868848
+    },
+    "train": {
+      "n": 18678,
+      "n_positive": 4208,
+      "prevalence": 0.22529178712924297
+    },
+    "val": {
+      "n": 4003,
+      "n_positive": 902,
+      "prevalence": 0.22533100174868848
+    }
+  },
+  "view_positions": {
+    "PA": 14511,
+    "AP": 12173
+  }
+}

@@ -1,0 +1,93 @@
+[
+  {
+    "model": "model_a",
+    "config": "ml/configs/model_a.yaml",
+    "training_script": "ml/training/train_model_a.py",
+    "training_script_exists": true,
+    "architecture": "implemented (5.2 M params)",
+    "checkpoint_path": "checkpoints/hybrid/model_a_best.pth",
+    "checkpoint": "missing",
+    "calibration": "missing",
+    "ood_statistics": "missing",
+    "evaluation_metrics": "missing",
+    "ready_for_inference": false
+  },
+  {
+    "model": "model_b",
+    "config": "ml/configs/model_b.yaml",
+    "training_script": "ml/training/train_model_b.py",
+    "training_script_exists": true,
+    "architecture": "implemented (5.2 M params)",
+    "checkpoint_path": "checkpoints/hybrid/model_b_best.pth",
+    "checkpoint": "missing",
+    "calibration": "missing",
+    "ood_statistics": "missing",
+    "evaluation_metrics": "missing",
+    "ready_for_inference": false
+  },
+  {
+    "model": "ablation_cls_only",
+    "config": "ml/configs/ablation_cls_only.yaml",
+    "training_script": "ml/training/train_ablation_cls_only.py",
+    "training_script_exists": true,
+    "architecture": "implemented (5.2 M params)",
+    "checkpoint_path": "checkpoints/hybrid/ablation_cls_only_best.pth",
+    "checkpoint": "missing",
+    "calibration": "missing",
+    "ood_statistics": "missing",
+    "evaluation_metrics": "missing",
+    "ready_for_inference": false
+  },
+  {
+    "model": "resnet50",
+    "config": "ml/configs/resnet50.yaml",
+    "training_script": "ml/training/train_resnet50.py",
+    "training_script_exists": true,
+    "architecture": "implemented (23.5 M params)",
+    "checkpoint_path": "checkpoints/baselines/resnet50_best.pth",
+    "checkpoint": "missing",
+    "calibration": "missing",
+    "ood_statistics": "missing",
+    "evaluation_metrics": "missing",
+    "ready_for_inference": false
+  },
+  {
+    "model": "densenet121",
+    "config": "ml/configs/densenet121.yaml",
+    "training_script": "ml/training/train_densenet121.py",
+    "training_script_exists": true,
+    "architecture": "implemented (7.0 M params)",
+    "checkpoint_path": "checkpoints/baselines/densenet121_best.pth",
+    "checkpoint": "missing",
+    "calibration": "missing",
+    "ood_statistics": "missing",
+    "evaluation_metrics": "missing",
+    "ready_for_inference": false
+  },
+  {
+    "model": "efficientnet_b0",
+    "config": "ml/configs/efficientnet_b0.yaml",
+    "training_script": "ml/training/train_efficientnet.py",
+    "training_script_exists": true,
+    "architecture": "implemented (4.0 M params)",
+    "checkpoint_path": "checkpoints/baselines/efficientnet_b0_best.pth",
+    "checkpoint": "missing",
+    "calibration": "missing",
+    "ood_statistics": "missing",
+    "evaluation_metrics": "missing",
+    "ready_for_inference": false
+  },
+  {
+    "model": "vit_small",
+    "config": "ml/configs/vit_small.yaml",
+    "training_script": "ml/training/train_vit.py",
+    "training_script_exists": true,
+    "architecture": "implemented (21.8 M params)",
+    "checkpoint_path": "checkpoints/baselines/vit_small_best.pth",
+    "checkpoint": "missing",
+    "calibration": "missing",
+    "ood_statistics": "missing",
+    "evaluation_metrics": "missing",
+    "ready_for_inference": false
+  }
+]

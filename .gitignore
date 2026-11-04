@@ -1,0 +1,56 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Datasets (never commit medical images)
+data/rsna/*
+!data/rsna/README.md
+data/nih/*
+!data/nih/README.md
+*.dcm
+*.png
+*.jpg
+*.jpeg
+!docs/**/*.png
+
+# Checkpoints / weights / calibration artefacts
+checkpoints/**/*
+!checkpoints/**/
+!checkpoints/**/.gitkeep
+
+# Outputs
+outputs/**/*
+!outputs/**/
+!outputs/**/.gitkeep
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Frontend (stage 2)
+node_modules/
+dist/
+
+# Per-seed experiment roots (see TRAINING_GUIDE §7)
+checkpoints_*/
+outputs_*/
+
+# --- Published Model B results (allowed) ---
+!checkpoints/hybrid/model_b_best.pth
+!checkpoints/calibration/temperature_scaling.json
+!outputs/metrics/*.json
+!outputs/logs/*.csv
+!outputs/reports/*.json
+!outputs/reports/*.md
+!outputs/paper_figures/*.png
+# keep out: uploaded analyses, per-image predictions, large last-epoch checkpoint
+outputs/analyses/
+outputs/paper_figures/*.zip

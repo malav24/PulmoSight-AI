@@ -1,0 +1,16 @@
+# Baseline classifier: ViT-Small/16 at 384px (timm vit_small_patch16_384).
+_base_: base.yaml
+experiment:
+  name: vit_small
+model:
+  name: vit_small
+  pretrained_backbone: true
+  head_dropout: 0.2
+training:
+  lr: 5.0e-5
+  backbone_lr: 5.0e-5
+  weight_decay: 0.05
+  warmup_epochs: 2
+checkpoint:
+  subdir: baselines
+  model_key: vit_small

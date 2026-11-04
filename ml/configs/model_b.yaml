@@ -1,0 +1,10 @@
+# Model B = ablation C: classification + localization + attention guidance from RSNA boxes.
+_base_: hybrid_common.yaml
+experiment:
+  name: model_b
+loss:
+  alpha: 1.0
+  lambda: 0.5
+  attention: outside_mass
+checkpoint:
+  model_key: model_b

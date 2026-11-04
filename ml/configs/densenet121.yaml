@@ -1,0 +1,14 @@
+# Baseline classifier: densenet121 (classification only, ImageNet-initialised for training).
+_base_: base.yaml
+experiment:
+  name: densenet121
+model:
+  name: densenet121
+  pretrained_backbone: true
+  head_dropout: 0.2
+training:
+  lr: 1.0e-4
+  backbone_lr: 1.0e-4
+checkpoint:
+  subdir: baselines
+  model_key: densenet121
