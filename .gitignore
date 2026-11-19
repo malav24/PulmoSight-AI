@@ -7,27 +7,54 @@ venv/
 .env
 .pytest_cache/
 .ipynb_checkpoints/
+.cache/
 
-# Datasets (never commit medical images)
+# Datasets (never commit medical images or cache)
 data/rsna/*
 !data/rsna/README.md
 data/nih/*
 !data/nih/README.md
+data/rsna/cache_384_clahe/
+data/rsna/stage_2_train_images/
+data/rsna/*.zip
+data/nih/sample/
 *.dcm
 *.png
 *.jpg
 *.jpeg
 !docs/**/*.png
+!outputs/paper_figures/*.png
 
-# Checkpoints / weights / calibration artefacts
+# Checkpoints / weights
 checkpoints/**/*
 !checkpoints/**/
 !checkpoints/**/.gitkeep
+
+# Whitelist all 7 BEST trained model checkpoints (<100MB each for GitHub)
+!checkpoints/hybrid/*_best.pth
+!checkpoints/baselines/*_best.pth
+!checkpoints/calibration/*.json
+
+# Exclude heavy optimizer/resume checkpoints (>100MB fails on GitHub)
+checkpoints/**/*_last.pth
 
 # Outputs
 outputs/**/*
 !outputs/**/
 !outputs/**/.gitkeep
+
+# Whitelist metrics, reports, paper figures and logs
+!outputs/metrics/*.json
+!outputs/logs/*.csv
+!outputs/reports/*.json
+!outputs/reports/*.md
+!outputs/reports/*.csv
+!outputs/paper_figures/*.png
+
+# Keep out heavy raw predictions and zip files
+outputs/predictions/
+outputs/analyses/
+outputs/paper_figures/*.zip
 
 # OS / IDE
 .DS_Store
@@ -38,19 +65,3 @@ Thumbs.db
 # Frontend (stage 2)
 node_modules/
 dist/
-
-# Per-seed experiment roots (see TRAINING_GUIDE §7)
-checkpoints_*/
-outputs_*/
-
-# --- Published Model B results (allowed) ---
-!checkpoints/hybrid/model_b_best.pth
-!checkpoints/calibration/temperature_scaling.json
-!outputs/metrics/*.json
-!outputs/logs/*.csv
-!outputs/reports/*.json
-!outputs/reports/*.md
-!outputs/paper_figures/*.png
-# keep out: uploaded analyses, per-image predictions, large last-epoch checkpoint
-outputs/analyses/
-outputs/paper_figures/*.zip

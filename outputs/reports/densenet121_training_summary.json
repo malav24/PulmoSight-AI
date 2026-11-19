@@ -1,0 +1,22 @@
+{
+  "best": 0.8905717417527141,
+  "best_path": "D:\\PulmoSight-AI-main\\checkpoints\\baselines\\densenet121_best.pth",
+  "last_path": "D:\\PulmoSight-AI-main\\checkpoints\\baselines\\densenet121_last.pth",
+  "log": "D:\\PulmoSight-AI-main\\outputs\\logs\\densenet121_training_log.csv",
+  "last_epoch_metrics": {
+    "epoch": 9,
+    "train_loss": 0.2623987040732251,
+    "train_loss_cls": 0.2623987040732251,
+    "train_loss_loc": 0.0,
+    "train_loss_attn": 0.0,
+    "val_loss": 1.6150009738574052,
+    "val_loss_cls": 1.6150009738574052,
+    "val_loss_loc": 0.0,
+    "val_loss_attn": 0.0,
+    "val_auc": 0.8599727503680594,
+    "val_threshold_youden": 0.166015625,
+    "lr_head": 7.827875973543793e-05,
+    "epoch_seconds": 330.3,
+    "is_best": 0
+  }
+}

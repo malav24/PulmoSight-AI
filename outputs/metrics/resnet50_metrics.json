@@ -1,0 +1,213 @@
+{
+  "model": "resnet50",
+  "checkpoint": "D:\\PulmoSight-AI-main\\checkpoints\\baselines\\resnet50_best.pth",
+  "epoch": 2,
+  "checkpoint_saved_at": "2026-11-19T14:10:41",
+  "localization_head_trained": false,
+  "attention_guided": false,
+  "threshold": {
+    "value": 0.39531856775283813,
+    "source": "Youden J on RSNA validation"
+  },
+  "temperature": 1.077688105088296,
+  "temperature_at_bound": false,
+  "rsna_test": {
+    "classification": {
+      "n": 4003,
+      "n_positive": 902,
+      "prevalence": 0.22533100174868848,
+      "threshold": 0.39531856775283813,
+      "roc_auc": 0.8789590082878636,
+      "sensitivity": 0.7982261640798226,
+      "specificity": 0.7868429538858432,
+      "precision": 0.5213613323678494,
+      "recall": 0.7982261640798226,
+      "npv": 0.9305873379099924,
+      "f1": 0.6307490144546649,
+      "accuracy": 0.7894079440419686,
+      "confusion_matrix": {
+        "labels": [
+          "negative",
+          "positive"
+        ],
+        "matrix": [
+          [
+            2440,
+            661
+          ],
+          [
+            182,
+            720
+          ]
+        ],
+        "tp": 720,
+        "fp": 661,
+        "tn": 2440,
+        "fn": 182
+      },
+      "roc_auc_bootstrap_ci": {
+        "estimate": 0.8789590082878636,
+        "ci_low": 0.8664239812407077,
+        "ci_high": 0.8908534212603626,
+        "n_boot_valid": 2000,
+        "level": 0.95
+      },
+      "roc_auc_delong_ci": {
+        "auc": 0.8789590082878638,
+        "se": 0.006292109861204076,
+        "ci_low": 0.8666266995731344,
+        "ci_high": 0.8912913170025931
+      }
+    },
+    "calibration_uncalibrated": {
+      "ece": 0.09989028197466931,
+      "ece_bins": 15,
+      "adaptive_ece": 0.09989028197466931,
+      "brier": 0.12484420576743034,
+      "n": 4003
+    },
+    "calibration_temperature_scaled": {
+      "ece": 0.10456902839015669,
+      "ece_bins": 15,
+      "adaptive_ece": 0.10456902839015667,
+      "brier": 0.12472209715640094,
+      "n": 4003
+    },
+    "explanations": {
+      "gradcam_localization": {
+        "n_annotated": 32,
+        "threshold": 0.5,
+        "iou": 0.13400402709912873,
+        "dice": 0.21780241908572598,
+        "pointing_game": 0.65625,
+        "mass_in_box": 0.40412611975577845
+      },
+      "gradcam_faithfulness": {
+        "deletion_auc": 0.5447288942697923,
+        "insertion_auc": 0.6531524564896245,
+        "n": 32,
+        "steps": 20,
+        "baseline": "blur",
+        "mass_in_box": 0.40412611975577845,
+        "pointing_game": 0.65625
+      }
+    },
+    "stress_tests": {
+      "original": {
+        "auc": 0.8789590082878636,
+        "n": 4003
+      },
+      "outside_lung_masking": {
+        "auc": 0.8733288954067459,
+        "auc_drop": 0.005630112881117699,
+        "mean_abs_prob_change": 0.08996254205703735,
+        "decision_flip_rate": 0.11041718710966775
+      },
+      "border_masking": {
+        "auc": 0.8762630036373361,
+        "auc_drop": 0.0026960046505274393,
+        "mean_abs_prob_change": 0.048126135021448135,
+        "decision_flip_rate": 0.062203347489382964
+      },
+      "marker_masking": {
+        "auc": 0.8788739202217153,
+        "auc_drop": 8.508806614826447e-05,
+        "mean_abs_prob_change": 0.005166146904230118,
+        "decision_flip_rate": 0.0029977516862353237,
+        "fraction_images_with_marker_candidates": 0.9603174603174603
+      },
+      "background_perturbation": {
+        "auc": 0.8781041949846663,
+        "auc_drop": 0.0008548133031972549,
+        "mean_abs_prob_change": 0.034324705600738525,
+        "decision_flip_rate": 0.03172620534599051
+      },
+      "_notes": "outside_lung/background tests use a geometric thorax ellipse, not a lung segmentation; marker detection is heuristic."
+    }
+  },
+  "nih_external": {
+    "selection_notes": [
+      "test_list.txt not found - using all 5606 NIH images listed (none are used for training)",
+      "excluded 1447 NIH images that also appear in RSNA"
+    ],
+    "classification": {
+      "n": 4159,
+      "n_positive": 29,
+      "prevalence": 0.006972830007213273,
+      "threshold": 0.39531856775283813,
+      "roc_auc": 0.6760207063538448,
+      "sensitivity": 0.41379310344827586,
+      "specificity": 0.7818401937046005,
+      "precision": 0.013143483023001095,
+      "recall": 0.41379310344827586,
+      "npv": 0.9947627849661121,
+      "f1": 0.025477707006369425,
+      "accuracy": 0.7792738639095936,
+      "confusion_matrix": {
+        "labels": [
+          "negative",
+          "positive"
+        ],
+        "matrix": [
+          [
+            3229,
+            901
+          ],
+          [
+            17,
+            12
+          ]
+        ],
+        "tp": 12,
+        "fp": 901,
+        "tn": 3229,
+        "fn": 17
+      },
+      "roc_auc_bootstrap_ci": {
+        "estimate": 0.6760207063538448,
+        "ci_low": 0.5656193617428824,
+        "ci_high": 0.7797635207269051,
+        "n_boot_valid": 2000,
+        "level": 0.95
+      },
+      "roc_auc_delong_ci": {
+        "auc": 0.6760207063538449,
+        "se": 0.05334519020317396,
+        "ci_low": 0.571466054807185,
+        "ci_high": 0.7805753579005048
+      }
+    },
+    "calibration_temperature_scaled": {
+      "ece": 0.22794665192013377,
+      "ece_bins": 15,
+      "adaptive_ece": 0.22794665192013377,
+      "brier": 0.12465022661273853,
+      "n": 4159
+    }
+  },
+  "generalization": {
+    "internal_auc": {
+      "estimate": 0.8789590082878636,
+      "ci_low": 0.8664239812407077,
+      "ci_high": 0.8908534212603626,
+      "n_boot_valid": 2000,
+      "level": 0.95
+    },
+    "external_auc": {
+      "estimate": 0.6760207063538448,
+      "ci_low": 0.5656193617428824,
+      "ci_high": 0.7797635207269051,
+      "n_boot_valid": 2000,
+      "level": 0.95
+    },
+    "auc_difference_internal_minus_external": {
+      "auc_difference": 0.20293830193401874,
+      "ci_low": 0.09853795950553379,
+      "ci_high": 0.31486035431912024,
+      "level": 0.95
+    },
+    "internal_prevalence": 0.22533100174868848,
+    "external_prevalence": 0.006972830007213273,
+    "notes": "Difference CI from an unpaired bootstrap; external CI is patient-clustered when groups are given."
+  }
+}

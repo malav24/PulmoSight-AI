@@ -1,0 +1,22 @@
+{
+  "best": 0.88206561648449,
+  "best_path": "D:\\PulmoSight-AI-main\\checkpoints\\baselines\\efficientnet_b0_best.pth",
+  "last_path": "D:\\PulmoSight-AI-main\\checkpoints\\baselines\\efficientnet_b0_last.pth",
+  "log": "D:\\PulmoSight-AI-main\\outputs\\logs\\efficientnet_b0_training_log.csv",
+  "last_epoch_metrics": {
+    "epoch": 9,
+    "train_loss": 0.2315678349742985,
+    "train_loss_cls": 0.2315678349742985,
+    "train_loss_loc": 0.0,
+    "train_loss_attn": 0.0,
+    "val_loss": 1.651779010003168,
+    "val_loss_cls": 1.651779010003168,
+    "val_loss_loc": 0.0,
+    "val_loss_attn": 0.0,
+    "val_auc": 0.8653281145986095,
+    "val_threshold_youden": 0.07080078125,
+    "lr_head": 7.827875973543793e-05,
+    "epoch_seconds": 291.4,
+    "is_best": 0
+  }
+}

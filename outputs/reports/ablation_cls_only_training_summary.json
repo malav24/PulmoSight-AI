@@ -1,0 +1,24 @@
+{
+  "best": 0.8930192749495728,
+  "best_path": "D:\\PulmoSight-AI-main\\checkpoints\\hybrid\\ablation_cls_only_best.pth",
+  "last_path": "D:\\PulmoSight-AI-main\\checkpoints\\hybrid\\ablation_cls_only_last.pth",
+  "log": "D:\\PulmoSight-AI-main\\outputs\\logs\\ablation_cls_only_training_log.csv",
+  "last_epoch_metrics": {
+    "epoch": 7,
+    "train_loss": 0.40619151102939194,
+    "train_loss_cls": 0.40619151102939194,
+    "train_loss_loc": 0.0,
+    "train_loss_attn": 0.0,
+    "val_loss": 1.2733849601807548,
+    "val_loss_cls": 1.2733849601807548,
+    "val_loss_loc": 0.0,
+    "val_loss_attn": 0.0,
+    "val_auc": 0.8551250544313364,
+    "val_threshold_youden": 0.054931640625,
+    "val_dice_pos": 0.1724082793446233,
+    "val_attn_mass_in_box": 0.7820616310826307,
+    "lr_head": 0.000259036326042508,
+    "epoch_seconds": 294.5,
+    "is_best": 0
+  }
+}

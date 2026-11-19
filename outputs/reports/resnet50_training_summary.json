@@ -1,0 +1,22 @@
+{
+  "best": 0.8771898557864533,
+  "best_path": "D:\\PulmoSight-AI-main\\checkpoints\\baselines\\resnet50_best.pth",
+  "last_path": "D:\\PulmoSight-AI-main\\checkpoints\\baselines\\resnet50_last.pth",
+  "log": "D:\\PulmoSight-AI-main\\outputs\\logs\\resnet50_training_log.csv",
+  "last_epoch_metrics": {
+    "epoch": 8,
+    "train_loss": 0.497045341971703,
+    "train_loss_cls": 0.497045341971703,
+    "train_loss_loc": 0.0,
+    "train_loss_attn": 0.0,
+    "val_loss": 1.0047744673072116,
+    "val_loss_cls": 1.0047744673072116,
+    "val_loss_loc": 0.0,
+    "val_loss_attn": 0.0,
+    "val_auc": 0.866657347497517,
+    "val_threshold_youden": 0.203125,
+    "lr_head": 8.254562109670048e-05,
+    "epoch_seconds": 268.4,
+    "is_best": 0
+  }
+}

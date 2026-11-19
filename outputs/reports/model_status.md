@@ -2,13 +2,13 @@
 
 | model | architecture | training_script_exists | checkpoint | calibration | ood_statistics | evaluation_metrics | ready_for_inference |
 |---|---|---|---|---|---|---|---|
-| model_a | implemented (5.2 M params) | True | missing | missing | missing | missing | False |
-| model_b | implemented (5.2 M params) | True | missing | missing | missing | missing | False |
-| ablation_cls_only | implemented (5.2 M params) | True | missing | missing | missing | missing | False |
-| resnet50 | implemented (23.5 M params) | True | missing | missing | missing | missing | False |
-| densenet121 | implemented (7.0 M params) | True | missing | missing | missing | missing | False |
-| efficientnet_b0 | implemented (4.0 M params) | True | missing | missing | missing | missing | False |
-| vit_small | implemented (21.8 M params) | True | missing | missing | missing | missing | False |
+| model_a | implemented (use --build to instantiate) | True | found (epoch 3, saved 2026-11-19T10:36:51) | found (T=1.048) | missing | found | True |
+| model_b | implemented (use --build to instantiate) | True | found (epoch 3, saved 2026-11-03T22:56:06) | found (T=1.249) | missing | found | True |
+| ablation_cls_only | implemented (use --build to instantiate) | True | found (epoch 1, saved 2026-11-19T11:21:07) | found (T=1.177) | missing | found | True |
+| resnet50 | implemented (use --build to instantiate) | True | found (epoch 2, saved 2026-11-19T14:10:41) | found (T=1.078) | missing | found | True |
+| densenet121 | implemented (use --build to instantiate) | True | found (epoch 3, saved 2026-11-19T13:13:59) | found (T=1.283) | missing | found | True |
+| efficientnet_b0 | implemented (use --build to instantiate) | True | found (epoch 3, saved 2026-11-19T12:16:24) | found (T=1.845) | missing | found | True |
+| vit_small | implemented (use --build to instantiate) | True | found (epoch 6, saved 2026-11-19T15:18:02) | found (T=1.320) | missing | found | True |
 
 Checkpoint locations:
 

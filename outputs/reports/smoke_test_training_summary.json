@@ -1,0 +1,24 @@
+{
+  "best": 0.4065656565656566,
+  "best_path": "D:\\PulmoSight-AI-main\\checkpoints\\hybrid\\smoke_test_best.pth",
+  "last_path": "D:\\PulmoSight-AI-main\\checkpoints\\hybrid\\smoke_test_last.pth",
+  "log": "D:\\PulmoSight-AI-main\\outputs\\logs\\smoke_test_training_log.csv",
+  "last_epoch_metrics": {
+    "epoch": 0,
+    "train_loss": 2.363433766365051,
+    "train_loss_cls": 1.1110773265361786,
+    "train_loss_loc": 1.0865919709205627,
+    "train_loss_attn": 0.33152892589569094,
+    "val_loss": 4.188117027282715,
+    "val_loss_cls": 2.297250668207804,
+    "val_loss_loc": 1.4634182850519817,
+    "val_loss_attn": 0.8548964460690817,
+    "val_auc": 0.4065656565656566,
+    "val_threshold_youden": 0.166015625,
+    "val_dice_pos": 0.32092125024646523,
+    "val_attn_mass_in_box": 0.23654612097889186,
+    "lr_head": 0.0003,
+    "epoch_seconds": 25.5,
+    "is_best": 1
+  }
+}

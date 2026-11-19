@@ -1,0 +1,14 @@
+{
+  "model_a_train_seconds": 3263.940875530243,
+  "model_a_eval": "success",
+  "ablation_cls_only_train_seconds": 2402.5944826602936,
+  "ablation_cls_only_eval": "success",
+  "efficientnet_b0_train_seconds": 3028.706241130829,
+  "efficientnet_b0_eval": "success",
+  "densenet121_train_seconds": 3347.113437652588,
+  "densenet121_eval": "success",
+  "resnet50_train_seconds": 2708.2598164081573,
+  "resnet50_eval": "success",
+  "vit_small_train_seconds": 3526.2474193573,
+  "vit_small_eval": "success"
+}

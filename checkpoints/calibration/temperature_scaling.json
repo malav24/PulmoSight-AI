@@ -1,12 +1,72 @@
 {
   "model_b": {
-    "temperature": 1.2494507763742435,
+    "temperature": 1.2494242806783247,
     "temperature_at_bound": false,
-    "threshold": 0.39759361743927,
+    "threshold": 0.39826786518096924,
     "threshold_method": "Youden J on RSNA validation",
     "fitted_on": "rsna_val",
     "n": 4003,
     "checkpoint_saved_at": "2026-11-03T22:56:06",
     "checkpoint_epoch": 3
+  },
+  "model_a": {
+    "temperature": 1.048127592282111,
+    "temperature_at_bound": false,
+    "threshold": 0.4284196197986603,
+    "threshold_method": "Youden J on RSNA validation",
+    "fitted_on": "rsna_val",
+    "n": 4003,
+    "checkpoint_saved_at": "2026-11-19T10:36:51",
+    "checkpoint_epoch": 3
+  },
+  "ablation_cls_only": {
+    "temperature": 1.177164913479648,
+    "temperature_at_bound": false,
+    "threshold": 0.38985803723335266,
+    "threshold_method": "Youden J on RSNA validation",
+    "fitted_on": "rsna_val",
+    "n": 4003,
+    "checkpoint_saved_at": "2026-11-19T11:21:07",
+    "checkpoint_epoch": 1
+  },
+  "efficientnet_b0": {
+    "temperature": 1.8453082341723221,
+    "temperature_at_bound": false,
+    "threshold": 0.5324376225471497,
+    "threshold_method": "Youden J on RSNA validation",
+    "fitted_on": "rsna_val",
+    "n": 4003,
+    "checkpoint_saved_at": "2026-11-19T12:16:24",
+    "checkpoint_epoch": 3
+  },
+  "densenet121": {
+    "temperature": 1.2832649739043476,
+    "temperature_at_bound": false,
+    "threshold": 0.3801878094673157,
+    "threshold_method": "Youden J on RSNA validation",
+    "fitted_on": "rsna_val",
+    "n": 4003,
+    "checkpoint_saved_at": "2026-11-19T13:13:59",
+    "checkpoint_epoch": 3
+  },
+  "resnet50": {
+    "temperature": 1.077688105088296,
+    "temperature_at_bound": false,
+    "threshold": 0.39531856775283813,
+    "threshold_method": "Youden J on RSNA validation",
+    "fitted_on": "rsna_val",
+    "n": 4003,
+    "checkpoint_saved_at": "2026-11-19T14:10:41",
+    "checkpoint_epoch": 2
+  },
+  "vit_small": {
+    "temperature": 1.3204347503945741,
+    "temperature_at_bound": false,
+    "threshold": 0.24321302771568298,
+    "threshold_method": "Youden J on RSNA validation",
+    "fitted_on": "rsna_val",
+    "n": 4003,
+    "checkpoint_saved_at": "2026-11-19T15:18:02",
+    "checkpoint_epoch": 6
   }
 }

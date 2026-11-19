@@ -1,0 +1,22 @@
+{
+  "best": 0.8874345662045933,
+  "best_path": "D:\\PulmoSight-AI-main\\checkpoints\\baselines\\vit_small_best.pth",
+  "last_path": "D:\\PulmoSight-AI-main\\checkpoints\\baselines\\vit_small_last.pth",
+  "log": "D:\\PulmoSight-AI-main\\outputs\\logs\\vit_small_training_log.csv",
+  "last_epoch_metrics": {
+    "epoch": 12,
+    "train_loss": 0.5055444522728089,
+    "train_loss_cls": 0.5055444522728089,
+    "train_loss_loc": 0.0,
+    "train_loss_attn": 0.0,
+    "val_loss": 0.8285412129732243,
+    "val_loss_cls": 0.8285412129732243,
+    "val_loss_loc": 0.0,
+    "val_loss_attn": 0.0,
+    "val_auc": 0.8756629182632596,
+    "val_threshold_youden": 0.11572265625,
+    "lr_head": 3.35918370179016e-05,
+    "epoch_seconds": 266.4,
+    "is_best": 0
+  }
+}
